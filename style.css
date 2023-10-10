@@ -1,9 +1,158 @@
-/* style.css */
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #151515; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to keep stars within view */
+}
+
+header {
+    background-color: #ff1493; /* Pink header background */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; /* White text */
 }
 
 h1 {
-    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: transparent; /* Transparent content background */
+}
+
+.message {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.message p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    animation: move-stars 10s linear infinite;
+}
+
+/* Define keyframes for the star animation */
+@keyframes move-stars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Style for the stars */
+.stars::before {
+    content: ' ';
+    position: absolute;
+    background: transparent;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: twinkling 1s infinite;
+}
+
+/* Define keyframes for star twinkling */
+@keyframes twinkling {
+    0% {
+        opacity: 1
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #151515; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to keep stars within view */
+}
+
+header {
+    background-color: #ff1493; /* Pink header background */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: transparent; /* Transparent content background */
+}
+
+.message {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.message p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    animation: move-stars 10s linear infinite;
+}
+
+/* Define keyframes for the star animation */
+@keyframes move-stars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Style for the stars */
+.stars::before {
+    content: ' ';
+    position: absolute;
+    background: transparent;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: twinkling 1s infinite;
+}
+
+/* Define keyframes for star twinkling */
+@keyframes twinkling {
+    0% {
+        opacity: 1
