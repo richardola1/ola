@@ -1,8 +1,8 @@
-// // script.js
-// const starsSection = document.querySelector('.stars');
-// const body = document.body;
+// script.js
+const starsSection = document.querySelector('.stars');
+const surpriseButton = document.getElementById('surprise-button');
 
-// // Toggle animation class on click anywhere on the page
-// body.addEventListener('click', () => {
-//     starsSection.classList.toggle('animate-stars');
-// });
+// Toggle animation class on button click
+surpriseButton.addEventListener('click', () => {
+    starsSection.classList.toggle('animate-stars');
+});
