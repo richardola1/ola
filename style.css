@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #151515; /* Dark background */
@@ -16,12 +16,36 @@ header {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
+.animated-text {
+    animation: colorChange 20s linear infinite;
+    font-family: "Arial", sans-serif; /* Change the font-family to your desired font */
+    font-style: italic; /* Make the text italic */
+    font-size: 20px; /* Increase the font size to your desired value */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff1493; /* Initial color (e.g., pink) */
+    }
+    25% {
+        color: #00f; /* Color change at 25% of the animation (e.g., blue) */
+    }
+    50% {
+        color: #ff6347; /* Color change at 50% of the animation (e.g., coral) */
+    }
+    75% {
+        color: #4caf50; /* Color change at 75% of the animation (e.g., green) */
+    }
+    100% {
+        color: #ff1493; /* Return to the initial color */
+    }
+}
+
 main {
-    position: relative; /* To position stars */
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -36,18 +60,80 @@ main {
 }
 
 .message p {
-    font-size: 18px;
+    font-size: 50px;
     line-height: 1.5;
 }
 
-button#surprise-button {
-    background-color: #ff1493; /* Pink button background */
-    color: #fff; /* White text */
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Jura|Rajdhani');
+
+body{background-color: #000;}
+.star{display: block; background-color: #fff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
+
+@keyframes move_right {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+}
+
+@keyframes move_left {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+}
+
+/* the intro panel */
+.intro{color:#63baf7; margin: 1em; font-family: Jura; font-size: 11pt}
+.intro h3{font-size: 16pt; margin-bottom: 0}
+.intro ul {padding-left: .3em;}
+.intro li {list-style-type: none; margin-left: .5em}
+.intro .customization-panel{display: flex;flex-wrap: wrap;}
+.intro .customization-title{flex-basis : 100%;padding: 10px 0; font-size: 14pt; text-shadow: 0 0 .3em #63baf7; color: #fff;}
+.intro .customization-js{margin-right: 2em;}
+
+/* styles.css */
+/* Your existing styles here */
+
+/* Push down .playlist, play, and pause buttons */
+.playlist, #play-button, #pause-button {
+    margin-top: 110px; /* Adjust the margin-top to your desired spacing */
+}
+
+/* styles.css */
+/* Your existing styles here */
+
+/* Styling for the welcome popup */
+.welcome-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#close-popup {
+    background-color: #007BFF;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
 }
 
-/* Styles for stars will be added dynamically by JavaScript */
+#close-popup:hover {
+    background-color: #0056b3;
+}
