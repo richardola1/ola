@@ -1,4 +1,4 @@
-var number_of_star = 150;
+var number_of_star = 300;
 
 var random_number = function(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
