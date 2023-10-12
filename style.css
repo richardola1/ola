@@ -1,11 +1,12 @@
 
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #151515; /* Dark background */
     color: #fff; /* Light text */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Hide overflow to keep stars within view */
+    overflow: auto; /* Hide overflow to keep stars within view */
 }
 
 header {
