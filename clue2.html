@@ -1,4 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 2: A Special Video Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff6b6b; /* A warm, romantic color */
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .next-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #007bff; /* A vibrant, inviting color */
+            text-decoration: none;
+        }
+
+        .next-link:hover {
+            text-decoration: underline;
+        }
+
+        
 
 body {
     background-image: url('https://wallpapers.com/images/hd/brent-faiyaz-peace-sign-and-afro-2ww6u6l21r1m9o8y.jpg');
@@ -133,3 +187,19 @@ body{background-color: #000;}
 .intro .customization-title{flex-basis : 100%;padding: 10px 0; font-size: 14pt; text-shadow: 0 0 .3em #63baf7; color: #fff;}
 .intro .customization-js{margin-right: 2em;}
 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>A Special Video Message</h1>
+        <p>Click the play button to watch a heartfelt video message just for you:</p>
+        <div class="video-container">
+            <!-- Embed your video here -->
+            <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/e93c0b8f-aff3-4fdf-8738-8a7653ead133" loading="lazy" title="Synthesia video player - Your AI video" allow="encrypted-media; fullscreen;" style="position: absolute; width: 100%; height: 70%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;" controls=0></iframe></div>
+        </div>
+        <a href="clue3.html" button id="next-link" class="next-link">Next</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

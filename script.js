@@ -20,5 +20,20 @@ var createStars = function(){
 
 createStars();
 
+let currentClue = 1;
+
+function nextClue(clue) {
+    if (clue === currentClue) {
+        document.getElementById(`clue${clue}`).style.display = 'none';
+        if (clue < 4) {
+            currentClue++;
+            document.getElementById(`clue${clue + 1}`).style.display = 'block';
+        } else {
+            document.getElementById('clue4').innerHTML = 'Step 4: You\'re my sunshine! The final surprise is coming up!';
+        }
+    }
+}
+
+
 
 

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 3: Relationship Quiz</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 3: My Fun Quiz for You</h1>
+        <p>Let's test how well we know each other! Take this quiz to see if we're on the same wavelength.</p>
+        <button id="startButton" onclick="startQuiz()">Start Quiz</button>
+        <div id="quiz" style="display: none;">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="result" style="display: none;">
+                <p>Your Score: <span id="score">0</span></p>
+                <p>Thanks for playing! The score explains how much you know me &#x1F602;                </p>
+            </div>
+            <button id="nextButton" onclick="nextQuestion()" style="display: none;">Next Question</button>
+        </div>
+        <!-- <a href="finalsurprise.html" class="next-link">Final Surprise</a> -->
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff6b6b; /* A warm, romantic color */
+}
+
+p {
+    font-size: 18px;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.next-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff; /* A vibrant, inviting color */
+    text-decoration: none;
+}
+
+.next-link:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-image: url('https://wallpapers.com/images/hd/brent-faiyaz-peace-sign-and-afro-2ww6u6l21r1m9o8y.jpg');
+    background-size: cover; /* This ensures the image covers the entire background */
+    font-family: 'Arial', sans-serif;
+    background-color: #151515; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Hide overflow to keep stars within view */
+    text-align: center;
+}
+
+header {
+    background-color: #ff1493; /* Pink header background */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    color:#ff1493 !important;
+    font-weight: bold;
+    font-family: "Helvetica";
+    line-height: 1.2
+}
+.animated-text {
+    animation: colorChange 20s linear infinite;
+    font-family: "Arial", sans-serif; /* Change the font-family to your desired font */
+    font-style: italic; /* Make the text italic */
+    font-weight: 300; /* Adjust the font weight (e.g., 400 for normal) */
+    color: #4caf50; /* Adjust the text color */
+    text-align: center; /* Center-align the text */
+    text-transform: lowercase; /* Uppercase text */
+    letter-spacing: 1px; /* Adjust letter spacing */
+    line-height: 1.2; /* Adjust line height */
+    margin: 15px 0; /* Adjust margin as needed */
+    font-size: 15px; /* Increase the font size to your desired value */
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #080101;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #ff00d4;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: #ff00ea;
+    text-decoration: none;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff1493; /* Initial color (e.g., pink) */
+    }
+    25% {
+        color: #00f; /* Color change at 25% of the animation (e.g., blue) */
+    }
+    50% {
+        color: #ff6347; /* Color change at 50% of the animation (e.g., coral) */
+    }
+    75% {
+        color: #4caf50; /* Color change at 75% of the animation (e.g., green) */
+    }
+    100% {
+        color: #ff1493; /* Return to the initial color */
+    }
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: transparent; /* Transparent content background */
+}
+
+.message {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message p {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Jura|Rajdhani');
+
+body{background-color: #000;}
+.star{display: block; background-color: #fff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
+
+@keyframes move_right {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+}
+
+@keyframes move_left {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+}
+
+/* the intro panel */
+.intro{color:#63baf7; margin: 1em; font-family: Jura; font-size: 11pt}
+.intro h3{font-size: 16pt; margin-bottom: 0}
+.intro ul {padding-left: .3em;}
+.intro li {list-style-type: none; margin-left: .5em}
+.intro .customization-panel{display: flex;flex-wrap: wrap;}
+.intro .customization-title{flex-basis : 100%;padding: 10px 0; font-size: 14pt; text-shadow: 0 0 .3em #63baf7; color: #fff;}
+.intro .customization-js{margin-right: 2em;}
+
+
+
+    </style>
+    <script>
+
+let currentQuestion = 1;
+let score = 0;
+
+function startQuiz() {
+    document.getElementById("quiz").style.display = "block";
+    document.getElementById("nextButton").style.display = "block";
+    document.getElementById("question").style.display = "block";
+    document.getElementById("startButton").style.display = "none";
+    showQuestion(currentQuestion);
+}
+
+function nextQuestion() {
+    const selectedOption = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
+    if (selectedOption) {
+        if (selectedOption.value === "correct") {
+            score++;
+        }
+        currentQuestion++;
+        if (currentQuestion <= 5) {
+            showQuestion(currentQuestion);
+        } else {
+            finishQuiz();
+        }
+    } else {
+        alert("Please select an option before moving to the next question.");
+    }
+}
+
+function showQuestion(questionNumber) {
+    document.getElementById("question").innerHTML = questions[questionNumber - 1].question;
+    const options = questions[questionNumber - 1].options;
+    let optionsHtml = "";
+    for (let i = 0; i < options.length; i++) {
+        optionsHtml += '<label><input type="radio" name="q' + questionNumber + '" value="' + options[i].value + '">' + options[i].label + '</label>';
+    }
+    document.getElementById("options").innerHTML = optionsHtml;
+}
+
+function finishQuiz() {
+    document.getElementById("question").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    document.getElementById("score").innerText = score + " out of 5";
+    document.getElementById("nextButton").style.display = "none";
+}
+
+const questions = [
+    {
+        question: "What would I rather have?",
+        options: [
+            { label: "Fried Egg", value: "incorrect" },
+            { label: "Boiled Egg", value: "correct" },
+        ],
+    },
+    {
+        question: "Do I like Pringles?",
+        options: [
+            { label: "Yes", value: "incorrect" },
+            { label: "No", value: "correct" },
+        ],
+    },
+    {
+        question: "On what App am I active the most?",
+        options: [
+            { label: "TikTok", value: "correct" },
+            { label: "Snapchat", value: "incorrect" },
+            { label: "Twitter", value: "incorrect" },
+        ],
+    },
+    {
+        question: "What's my favorite season?",
+        options: [
+            { label: "Spring", value: "incorrect" },
+            { label: "Winter", value: "correct" },
+            { label: "Summer", value: "incorrect" },
+        ],
+    },
+    {
+        question: "What's my favorite Ice Cream flavor?",
+        options: [
+            { label: "Mango", value: "incorrect" },
+            { label: "Chocolate", value: "correct" },
+            { label: "Caramel", value: "incorrect" },
+        ],
+    },
+];
+
+
+
+    </script>
+</body>
+</html>
